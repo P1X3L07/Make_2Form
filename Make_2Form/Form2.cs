@@ -52,7 +52,7 @@ namespace Make_2Form
 
         private void TelpTxtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void BtnNext_Click(object sender, EventArgs e)
